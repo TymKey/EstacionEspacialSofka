@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NaveForm from "./NaveForm";
 import NaveTable from "./NaveTable";
 
@@ -51,14 +51,34 @@ const initialDatabase = [
   },
 ];
 
+function obtenerLocal() {
+  const previousDataBase = JSON.parse(
+    localStorage.getItem("persistenceDataBase")
+  );
+  if (previousDataBase) {
+    return previousDataBase;
+  } else {
+    return initialDatabase;
+  }
+}
+
+function guardarLocal(data) {
+  localStorage.setItem("persistenceDataBase", JSON.stringify(data));
+}
+
 const NaveSpace = () => {
   const [database, setDatabase] = useState(initialDatabase);
   const [dataToEdit, setDataToEdit] = useState(null);
+
+  useEffect(() => {
+    setDatabase(obtenerLocal());
+  }, []);
 
   const createData = (data) => {
     data.id = Date.now();
     console.log(data);
     setDatabase([...database, data]);
+    guardarLocal([...database, data]);
   };
 
   const updateData = (data) => {};
