@@ -57,8 +57,8 @@ const NaveSpace = () => {
 
   const createData = (data) => {
     data.id = Date.now();
-    //console.log(data);
-    setDatabase(...database, data);
+    console.log(data);
+    setDatabase([...database, data]);
   };
 
   const updateData = (data) => {};

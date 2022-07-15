@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
 const initialForm = {
-  category: "",
   name: "",
+  category: "",
   id: null,
 };
 
 const NaveForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState(initialForm);
 
   const handleChange = (e) => {
     setForm({
@@ -57,7 +57,7 @@ const NaveForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
           value={form.name}
         />
         <input type="submit" value="Enviar" />
-        <input type="submit" value="Limpiar" onClick={handleReset} />
+        <input type="reset" value="Limpiar" onClick={handleReset} />
       </form>
     </div>
   );
