@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import NaveForm from "./NaveForm";
-import NaveTable from "./NaveTable";
+import Form from "./Form";
+import Table from "./Table";
 
 const initialDatabase = [
   {
@@ -66,7 +66,7 @@ function guardarLocal(data) {
   localStorage.setItem("persistenceDataBase", JSON.stringify(data));
 }
 
-const NaveSpace = () => {
+const Space = () => {
   const [database, setDatabase] = useState(initialDatabase);
   const [dataToEdit, setDataToEdit] = useState(null);
 
@@ -81,26 +81,18 @@ const NaveSpace = () => {
     guardarLocal([...database, data]);
   };
 
-  const updateData = (data) => {};
-
-  const deleteData = (id) => {};
-
   return (
     <div>
       <h2>Naves Espaciales</h2>
-      <NaveForm
+      
+      <Form
         createData={createData}
-        updateData={updateData}
         dataToEdit={dataToEdit}
         setDataToEdit={setDataToEdit}
       />
-      <NaveTable
-        data={database}
-        setDataToEdit={setDataToEdit}
-        deleteData={deleteData}
-      />
+      <Table data={database} setDataToEdit={setDataToEdit} />
     </div>
   );
 };
 
-export default NaveSpace;
+export default Space;

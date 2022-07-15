@@ -1,11 +1,11 @@
 import React from "react";
-import NaveSpace from "./components/NaveSpace";
+import Space from "./components/Space";
 
 function App() {
   return (
     <>
       <h1>Prueba Sofka</h1>
-      <NaveSpace/>
+      <Space/>
     </>
   );
 }

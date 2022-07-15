@@ -1,16 +1,15 @@
 import React from "react";
-import NaveTableRow from "./NaveTableRow";
+import TableRow from "./TableRow";
 
-const NaveTable = ({ data }) => {
+const Table = ({ data }) => {
   return (
     <div>
       <h3>Tabla Datos</h3>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Categoria</th>
             <th>Nombre</th>
-            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -19,7 +18,7 @@ const NaveTable = ({ data }) => {
               <td colSpan="3">Sin datos</td>
             </tr>
           ) : (
-            data.map((el) => <NaveTableRow key={el.id} el={el} />)
+            data.map((el) => <TableRow key={el.id} el={el} />)
           )}
         </tbody>
       </table>
@@ -27,4 +26,4 @@ const NaveTable = ({ data }) => {
   );
 };
 
-export default NaveTable;
+export default Table;

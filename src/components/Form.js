@@ -2,38 +2,36 @@ import React, { useState } from "react";
 
 const initialForm = {
   name: "",
-  category: "",
+  category: "Lanzadera",
   id: null,
 };
 
-const NaveForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
+const Form = ({ createData, updateData, setDataToEdit }) => {
   const [form, setForm] = useState(initialForm);
 
-  const handleChange = (e) => {
+  const handleChange = (event) => {
+    console.log(event.target.value);
     setForm({
       ...form,
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
     if (!form.category || !form.name) {
       alert("Datos incompletos");
       return;
     }
-
     if (form.id === null) {
       createData(form);
     } else {
       updateData(form);
     }
-
     handleReset();
   };
 
-  const handleReset = (e) => {
+  const handleReset = () => {
     setForm(initialForm);
     setDataToEdit(null);
   };
@@ -42,25 +40,21 @@ const NaveForm = ({ createData, updateData, dataToEdit, setDataToEdit }) => {
     <div>
       <h3>Agregar</h3>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="category"
-          placeholder="Categoria"
-          onChange={handleChange}
-          value={form.category}
-        />
+        <select name="category" onChange={handleChange}>
+          <option value="Lanzadera">Lanzadera</option>
+          <option value="Tripulada">Tripulada</option>
+          <option value="Espaciales">Espaciales</option>
+        </select>
         <input
           type="text"
           name="name"
           placeholder="Nombre"
           onChange={handleChange}
-          value={form.name}
         />
-        <input type="submit" value="Enviar" />
-        <input type="reset" value="Limpiar" onClick={handleReset} />
+        <input type="submit" value="Agregar Nave" />
       </form>
     </div>
   );
 };
 
-export default NaveForm;
+export default Form;
