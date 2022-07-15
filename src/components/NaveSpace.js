@@ -53,11 +53,32 @@ const initialDatabase = [
 
 const NaveSpace = () => {
   const [database, setDatabase] = useState(initialDatabase);
+  const [dataToEdit, setDataToEdit] = useState(null);
+
+  const createData = (data) => {
+    data.id = Date.now();
+    //console.log(data);
+    setDatabase(...database, data);
+  };
+
+  const updateData = (data) => {};
+
+  const deleteData = (id) => {};
+
   return (
     <div>
       <h2>Naves Espaciales</h2>
-      <NaveForm />
-      <NaveTable data={database} />
+      <NaveForm
+        createData={createData}
+        updateData={updateData}
+        dataToEdit={dataToEdit}
+        setDataToEdit={setDataToEdit}
+      />
+      <NaveTable
+        data={database}
+        setDataToEdit={setDataToEdit}
+        deleteData={deleteData}
+      />
     </div>
   );
 };

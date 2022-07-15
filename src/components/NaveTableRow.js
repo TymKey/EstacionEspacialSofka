@@ -1,10 +1,10 @@
 import React from "react";
 
-const NaveTableRow = () => {
+const NaveTableRow = ({ el }) => {
   return (
     <tr>
-      <td>categoria</td>
-      <td>nombre</td>
+      <td>{el.category}</td>
+      <td>{el.name}</td>
       <td>
         <button>Editar</button>
         <button>Eliminar</button>
