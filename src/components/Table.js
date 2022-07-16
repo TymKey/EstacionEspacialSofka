@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import TableRow from "./TableRow";
 
+/* Rederizar Headers para tabla */
 const Table = ({ data }) => {
   return (
     <div>
@@ -30,8 +31,9 @@ const Table = ({ data }) => {
   );
 };
 
+/* Interfaz para las propiedades recibidas en el componente */
 Table.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.array,
 };
 
 export default Table;

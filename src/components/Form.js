@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+/* Estado inicial para los inputs del formulario */
 const initialForm = {
   name: "",
   category: "Lanzadera",
@@ -10,6 +11,7 @@ const initialForm = {
 const Form = ({ createData }) => {
   const [form, setForm] = useState(initialForm);
 
+  /* Guardar los cambios del formulario en un objeto */
   const handleChange = (event) => {
     setForm({
       ...form,
@@ -17,6 +19,7 @@ const Form = ({ createData }) => {
     });
   };
 
+  /* Validar datos ingresados y crear nueva nave */
   const handleSubmit = (event) => {
     event.preventDefault();
     if (
@@ -33,6 +36,7 @@ const Form = ({ createData }) => {
     handleReset();
   };
 
+  /* Limpia el formulario */
   const handleReset = () => {
     setForm(initialForm);
   };
@@ -80,8 +84,9 @@ const Form = ({ createData }) => {
   );
 };
 
+/* Interfaz para las propiedades recibidas en el componente */
 Form.propTypes = {
-  createData: PropTypes.func
+  createData: PropTypes.func,
 };
 
 export default Form;

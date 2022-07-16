@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Ship } from "../models/Ship";
 
+/* Renderizar cada una de las filas de la tabla */
 const TableRow = ({ ship }) => {
   return (
     <tr>
@@ -14,6 +15,7 @@ const TableRow = ({ ship }) => {
   );
 };
 
+/* Interfaz para las propiedades recibidas en el componente */
 TableRow.propTypes = {
   ship: PropTypes.instanceOf(Ship),
 };

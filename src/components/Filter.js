@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Filter = ({ database, setFilteredDatabase }) => {
   const [search, setSearch] = useState("");
 
+  /* Realizar el filtrado teniendo en cuenta cualquier coincidencia con las propiedades de las naves */
   const filterList = () => {
     const naves = database.filter(
       (nave) =>
@@ -17,10 +18,12 @@ const Filter = ({ database, setFilteredDatabase }) => {
     setSearch("");
   };
 
+  /* Guardar en un estado el valor de la caja de texto */
   const handleChange = (event) => {
     setSearch(event.target.value.toUpperCase());
   };
 
+  /* Mostrar las naves de nuevo sin aplicar ningun filtro */
   const reset = () => {
     setFilteredDatabase(database);
   };
@@ -40,6 +43,7 @@ const Filter = ({ database, setFilteredDatabase }) => {
   );
 };
 
+/* Interfaz para las propiedades recibidas en el componente */
 Filter.propTypes = {
   database: PropTypes.array,
   setFilteredDatabase: PropTypes.func
