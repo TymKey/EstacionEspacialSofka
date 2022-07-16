@@ -9,12 +9,30 @@ const initialDatabase = [];
 const shipOne = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
 const shipTwo = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
 const shipThree = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipFour = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipFive = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipSix = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipSeven = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipEight = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipNine = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipFour = new Ship(
+  "No Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco"
+);
+const shipFive = new Ship(
+  "No Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco"
+);
+const shipSix = new Ship(
+  "No Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco"
+);
+const shipSeven = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
+const shipEight = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
+const shipNine = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
 initialDatabase.push(
   shipOne,
   shipTwo,

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const initialForm = {
   name: "",
@@ -18,7 +19,13 @@ const Form = ({ createData }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!form.category || !form.name) {
+    if (
+      !form.category ||
+      !form.name ||
+      !form.speed ||
+      !form.creatorCountry ||
+      !form.color
+    ) {
       alert("Datos incompletos");
       return;
     }
@@ -36,8 +43,8 @@ const Form = ({ createData }) => {
       <form onSubmit={handleSubmit}>
         <select name="category" onChange={handleChange}>
           <option value="Lanzadera">Lanzadera</option>
-          <option value="Tripulada">Tripulada</option>
-          <option value="Espaciales">Espaciales</option>
+          <option value="No Tripuladas">No Tripuladas</option>
+          <option value="Tripuladas">Tripuladas</option>
         </select>
         <input
           type="text"
@@ -46,10 +53,35 @@ const Form = ({ createData }) => {
           value={form.name}
           onChange={handleChange}
         />
+        <input
+          type="text"
+          name="speed"
+          placeholder="Velocidad"
+          value={form.speed}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="creatorCountry"
+          placeholder="País"
+          value={form.creatorCountry}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="color"
+          placeholder="Color"
+          value={form.color}
+          onChange={handleChange}
+        />
         <input type="submit" value="Agregar Nave" />
       </form>
     </div>
   );
+};
+
+Form.propTypes = {
+  createData: PropTypes.func
 };
 
 export default Form;

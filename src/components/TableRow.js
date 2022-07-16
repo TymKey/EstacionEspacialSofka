@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Ship } from "../models/Ship";
 
 const TableRow = ({ ship }) => {
   return (
@@ -10,6 +12,10 @@ const TableRow = ({ ship }) => {
       <td>{ship.color}</td>
     </tr>
   );
+};
+
+TableRow.propTypes = {
+  ship: PropTypes.instanceOf(Ship),
 };
 
 export default TableRow;

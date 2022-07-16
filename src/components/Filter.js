@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 const Filter = ({ database, setFilteredDatabase }) => {
   const [search, setSearch] = useState("");
@@ -7,7 +8,10 @@ const Filter = ({ database, setFilteredDatabase }) => {
     const naves = database.filter(
       (nave) =>
         nave.category.toUpperCase().includes(search) ||
-        nave.name.toUpperCase().includes(search)
+        nave.name.toUpperCase().includes(search) ||
+        nave.speed.toUpperCase().includes(search) ||
+        nave.creatorCountry.toUpperCase().includes(search) ||
+        nave.color.toUpperCase().includes(search)
     );
     setFilteredDatabase(naves);
     setSearch("");
@@ -34,6 +38,11 @@ const Filter = ({ database, setFilteredDatabase }) => {
       <button onClick={reset}>Resetear</button>
     </div>
   );
+};
+
+Filter.propTypes = {
+  database: PropTypes.array,
+  setFilteredDatabase: PropTypes.func
 };
 
 export default Filter;

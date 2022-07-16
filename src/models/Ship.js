@@ -24,4 +24,8 @@ export class Ship extends Vehicle {
   deploy() {
     console.log("the ship is deploy");
   }
+
+  takePictureFromSpace() {
+    console.log("the ship took a picture");
+  }
 }
