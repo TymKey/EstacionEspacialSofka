@@ -10,6 +10,9 @@ const Table = ({ data }) => {
           <tr>
             <th>Categoria</th>
             <th>Nombre</th>
+            <th>Velocidad</th>
+            <th>País</th>
+            <th>Color</th>
           </tr>
         </thead>
         <tbody>
@@ -18,7 +21,7 @@ const Table = ({ data }) => {
               <td colSpan="3">Sin datos</td>
             </tr>
           ) : (
-            data.map((el) => <TableRow key={el.id} el={el} />)
+            data.map((ship) => <TableRow key={ship.id} ship={ship} />)
           )}
         </tbody>
       </table>

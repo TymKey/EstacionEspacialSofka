@@ -2,55 +2,30 @@ import React, { useEffect, useState } from "react";
 import Filter from "./Filter";
 import Form from "./Form";
 import Table from "./Table";
+import { Ship } from "../models/Ship";
 
-const initialDatabase = [
-  {
-    id: 1,
-    category: "Lanzadera",
-    name: "Apolo 11",
-  },
-  {
-    id: 2,
-    category: "Lanzadera",
-    name: "Apolo 12",
-  },
-  {
-    id: 3,
-    category: "Lanzadera",
-    name: "Apolo 13",
-  },
-  {
-    id: 4,
-    category: "Tripulada",
-    name: "Apolo 14",
-  },
-  {
-    id: 5,
-    category: "Tripulada",
-    name: "Apolo 15",
-  },
-  {
-    id: 6,
-    category: "Tripulada",
-    name: "Apolo 16",
-  },
+const initialDatabase = [];
 
-  {
-    id: 7,
-    category: "Espaciales",
-    name: "Apolo 17",
-  },
-  {
-    id: 8,
-    category: "Espaciales",
-    name: "Apolo 18",
-  },
-  {
-    id: 9,
-    category: "Espaciales",
-    name: "Apolo 19",
-  },
-];
+const shipOne = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipTwo = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipThree = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipFour = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipFive = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipSix = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipSeven = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipEight = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipNine = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+initialDatabase.push(
+  shipOne,
+  shipTwo,
+  shipThree,
+  shipFour,
+  shipFive,
+  shipSix,
+  shipSeven,
+  shipEight,
+  shipNine
+);
 
 function getLocal() {
   const previousDataBase = JSON.parse(

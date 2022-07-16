@@ -1,10 +1,13 @@
 import React from "react";
 
-const TableRow = ({ el }) => {
+const TableRow = ({ ship }) => {
   return (
     <tr>
-      <td>{el.category}</td>
-      <td>{el.name}</td>
+      <td>{ship.category}</td>
+      <td>{ship.name}</td>
+      <td>{ship.speed}</td>
+      <td>{ship.creatorCountry}</td>
+      <td>{ship.color}</td>
     </tr>
   );
 };
