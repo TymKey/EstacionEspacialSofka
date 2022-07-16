@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Filter from "./Filter";
 import Form from "./Form";
 import Table from "./Table";
 
@@ -51,7 +52,7 @@ const initialDatabase = [
   },
 ];
 
-function obtenerLocal() {
+function getLocal() {
   const previousDataBase = JSON.parse(
     localStorage.getItem("persistenceDataBase")
   );
@@ -62,35 +63,32 @@ function obtenerLocal() {
   }
 }
 
-function guardarLocal(data) {
+function saveLocal(data) {
   localStorage.setItem("persistenceDataBase", JSON.stringify(data));
 }
 
 const Space = () => {
   const [database, setDatabase] = useState(initialDatabase);
-  const [dataToEdit, setDataToEdit] = useState(null);
+  const [filteredDatabase, setFilteredDatabase] = useState(initialDatabase);
 
   useEffect(() => {
-    setDatabase(obtenerLocal());
+    setDatabase(getLocal());
+    setFilteredDatabase(getLocal());
   }, []);
 
   const createData = (data) => {
     data.id = Date.now();
-    console.log(data);
     setDatabase([...database, data]);
-    guardarLocal([...database, data]);
+    setFilteredDatabase([...database, data]);
+    saveLocal([...database, data]);
   };
 
   return (
     <div>
       <h2>Naves Espaciales</h2>
-      
-      <Form
-        createData={createData}
-        dataToEdit={dataToEdit}
-        setDataToEdit={setDataToEdit}
-      />
-      <Table data={database} setDataToEdit={setDataToEdit} />
+      <Filter database={database} setFilteredDatabase={setFilteredDatabase} />
+      <Form createData={createData} />
+      <Table data={filteredDatabase} />
     </div>
   );
 };

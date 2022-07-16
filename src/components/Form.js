@@ -6,11 +6,10 @@ const initialForm = {
   id: null,
 };
 
-const Form = ({ createData, updateData, setDataToEdit }) => {
+const Form = ({ createData }) => {
   const [form, setForm] = useState(initialForm);
 
   const handleChange = (event) => {
-    console.log(event.target.value);
     setForm({
       ...form,
       [event.target.name]: event.target.value,
@@ -23,22 +22,17 @@ const Form = ({ createData, updateData, setDataToEdit }) => {
       alert("Datos incompletos");
       return;
     }
-    if (form.id === null) {
-      createData(form);
-    } else {
-      updateData(form);
-    }
+    createData(form);
     handleReset();
   };
 
   const handleReset = () => {
     setForm(initialForm);
-    setDataToEdit(null);
   };
 
   return (
     <div>
-      <h3>Agregar</h3>
+      <h3>Agregar Naves</h3>
       <form onSubmit={handleSubmit}>
         <select name="category" onChange={handleChange}>
           <option value="Lanzadera">Lanzadera</option>
@@ -49,6 +43,7 @@ const Form = ({ createData, updateData, setDataToEdit }) => {
           type="text"
           name="name"
           placeholder="Nombre"
+          value={form.name}
           onChange={handleChange}
         />
         <input type="submit" value="Agregar Nave" />
