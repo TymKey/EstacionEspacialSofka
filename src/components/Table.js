@@ -20,7 +20,7 @@ const Table = ({ data }) => {
         <tbody>
           {data.length === 0 ? (
             <tr>
-              <td colSpan="3">Sin datos</td>
+              <td colSpan="5">Sin datos</td>
             </tr>
           ) : (
             data.map((ship) => <TableRow key={ship.id} ship={ship} />)

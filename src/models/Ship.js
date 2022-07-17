@@ -21,18 +21,19 @@ class Vehicle {
 /* Herencia de la clase principal para crear la clase Ship */
 export class Ship extends Vehicle {
   /* Instanciamiento de las propiedades de la clase padre y las propiedades de la clase Ship */
-  constructor(category, creatorCountry, speed, name, color) {
+  constructor(category, creatorCountry, speed, name, color, id) {
     super(speed, name, color);
     this.category = category;
     this.creatorCountry = creatorCountry;
+    this.id = id;
   }
 
-  /* Metodo adicional */
+  /* Metodo propio */
   deploy() {
     console.log("the ship is deploy");
   }
 
-  /* Metodo adicional */
+  /* Metodo propio */
   takePictureFromSpace() {
     console.log("the ship took a picture");
   }

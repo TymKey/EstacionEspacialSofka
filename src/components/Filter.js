@@ -46,7 +46,7 @@ const Filter = ({ database, setFilteredDatabase }) => {
 /* Interfaz para las propiedades recibidas en el componente */
 Filter.propTypes = {
   database: PropTypes.array,
-  setFilteredDatabase: PropTypes.func
+  setFilteredDatabase: PropTypes.func,
 };
 
 export default Filter;

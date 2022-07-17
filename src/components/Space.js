@@ -8,33 +8,64 @@ import { Ship } from "../models/Ship";
 const initialDatabase = [];
 
 /* Instanciar objetos de ejemplo con la clase Ship */
-const shipOne = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipTwo = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
-const shipThree = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco");
+const shipOne = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco", 1);
+const shipTwo = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco", 2);
+const shipThree = new Ship(
+  "Lanzadera",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco",
+  3
+);
 const shipFour = new Ship(
   "No Tripuladas",
   "US",
   "600km/h",
   "Apolo 11",
-  "Blanco"
+  "Blanco",
+  4
 );
 const shipFive = new Ship(
   "No Tripuladas",
   "US",
   "600km/h",
   "Apolo 11",
-  "Blanco"
+  "Blanco",
+  5
 );
 const shipSix = new Ship(
   "No Tripuladas",
   "US",
   "600km/h",
   "Apolo 11",
-  "Blanco"
+  "Blanco",
+  6
 );
-const shipSeven = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
-const shipEight = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
-const shipNine = new Ship("Tripuladas", "US", "600km/h", "Apolo 11", "Blanco");
+const shipSeven = new Ship(
+  "Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco",
+  7
+);
+const shipEight = new Ship(
+  "Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco",
+  8
+);
+const shipNine = new Ship(
+  "Tripuladas",
+  "US",
+  "600km/h",
+  "Apolo 11",
+  "Blanco",
+  9
+);
 
 /* Inyectar objetos instanciados dentro de la lista de base de datos */
 initialDatabase.push(

@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 /* Estado inicial para los inputs del formulario */
 const initialForm = {
   name: "",
+  speed: "",
+  creatorCountry: "",
+  color: "",
   category: "Lanzadera",
   id: null,
 };
