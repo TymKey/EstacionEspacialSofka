@@ -9,7 +9,10 @@ Reto Técnico Sofka: Training League
 Aplicación creada con el fin de desarrollar la solución al reto propuesto por 
 el programa de la empresa **Sofka**
 
-Enlace para redirigirse a la pagina : https://estacionespacial.netlify.app/
+**IMPORTANTE**
+
+Enlace para redirigirse al Aplicaciòn : https://estacionespacial.netlify.app/
+Enlace para redirigirse al video de Youtube : https://www.youtube.com/watch?v=tMx-oPH2dTk
 
 ## Tecnologías 🖥
 Estuve trabajando con :
