@@ -73,7 +73,7 @@ const Form = ({ createData }) => {
               className="form-control"
               type="text"
               name="speed"
-              placeholder="Velocidad"
+              placeholder="Altitud"
               value={form.speed}
               onChange={handleChange}
             />
