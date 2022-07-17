@@ -135,11 +135,11 @@ const Space = () => {
       <Filter database={database} setFilteredDatabase={setFilteredDatabase} />
       <Form createData={createData} />
       <Table data={filteredDatabase} />
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <span class="text-muted">Version 0.1</span>
-          <span class="text-muted">Estación Espacial</span>
-          <span class="text-muted">Brayan Stiven Cruz Aguilar</span>
+      <div className="container">
+        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <span className="text-muted">Version 0.1</span>
+          <span className="text-muted">Estación Espacial</span>
+          <span className="text-muted">Brayan Stiven Cruz Aguilar</span>
         </footer>
       </div>
     </div>
