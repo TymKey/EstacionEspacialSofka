@@ -12,7 +12,7 @@ const Table = ({ data }) => {
           <tr>
             <th>Categoria</th>
             <th>Nombre</th>
-            <th>Velocidad</th>
+            <th>Altitud</th>
             <th>País</th>
             <th>Color</th>
           </tr>

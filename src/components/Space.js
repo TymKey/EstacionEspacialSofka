@@ -8,62 +8,76 @@ import { Ship } from "../models/Ship";
 const initialDatabase = [];
 
 /* Instanciar objetos de ejemplo con la clase Ship */
-const shipOne = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco", 1);
-const shipTwo = new Ship("Lanzadera", "US", "600km/h", "Apolo 11", "Blanco", 2);
+const shipOne = new Ship(
+  "Lanzadera",
+  "Ruso",
+  "8800km",
+  "R-7 Semiorka",
+  "Amarillo",
+  1
+);
+const shipTwo = new Ship(
+  "Lanzadera",
+  "Estados Unidos",
+  "9600km",
+  "Saturno V",
+  "Blanco",
+  2
+);
 const shipThree = new Ship(
   "Lanzadera",
-  "US",
-  "600km/h",
-  "Apolo 11",
-  "Blanco",
+  "Estados Unidos",
+  "350km",
+  "Astrobee 200",
+  "Rojo",
   3
 );
 const shipFour = new Ship(
   "No Tripuladas",
-  "US",
-  "600km/h",
-  "Apolo 11",
-  "Blanco",
+  "Ruso",
+  "450km",
+  "Progress",
+  "Negro",
   4
 );
 const shipFive = new Ship(
   "No Tripuladas",
-  "US",
-  "600km/h",
-  "Apolo 11",
+  "Estados Unidos",
+  "680km",
+  "SpaceX Dragon",
   "Blanco",
   5
 );
 const shipSix = new Ship(
   "No Tripuladas",
-  "US",
-  "600km/h",
-  "Apolo 11",
-  "Blanco",
+  "Estados Unidos",
+  "890km",
+  "Cygnus",
+  "Verde",
   6
 );
 const shipSeven = new Ship(
   "Tripuladas",
-  "US",
-  "600km/h",
+  "Estados Unidos",
+  "122km",
   "Apolo 11",
   "Blanco",
   7
 );
 const shipEight = new Ship(
   "Tripuladas",
-  "US",
-  "600km/h",
-  "Apolo 11",
-  "Blanco",
+  "Unión Soviética",
+  "158km",
+  "Soyuz",
+  "Gris",
   8
 );
 const shipNine = new Ship(
   "Tripuladas",
-  "US",
-  "600km/h",
-  "Apolo 11",
-  "Blanco",
+  "China",
+  "136km",
+  "Shenzhou",
+  "Azul",
   9
 );
 
