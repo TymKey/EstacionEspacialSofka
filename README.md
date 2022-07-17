@@ -1,6 +1,6 @@
 # Estación Espacial Sofka
 
-![Logo]([https://cdn-icons-png.flaticon.com/512/1994/1994421.png](https://www.nasa.gov/envia-tu-nombre-con-artemis/img/logo--rocket.png))
+![Logo](https://www.nasa.gov/envia-tu-nombre-con-artemis/img/logo--rocket.png)
 
 Reto Técnico Sofka: Training League
 
