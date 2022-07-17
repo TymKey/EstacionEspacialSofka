@@ -5,9 +5,9 @@ import TableRow from "./TableRow";
 /* Rederizar Headers para tabla */
 const Table = ({ data }) => {
   return (
-    <div>
-      <h3>Tabla Datos</h3>
-      <table className="table">
+    <div className="mt-4">
+      <h3 className="text-center">Tabla Datos</h3>
+      <table className="table table-striped w-75 mx-auto">
         <thead>
           <tr>
             <th>Categoria</th>

@@ -29,16 +29,23 @@ const Filter = ({ database, setFilteredDatabase }) => {
   };
 
   return (
-    <div>
+    <div className="d-flex mx-auto flex-column w-50 mt-2 p-10">
       <input
+        className="form-control"
         type="text"
         name="name"
         placeholder="Search"
         value={search}
         onChange={handleChange}
       />
-      <button onClick={filterList}>Buscar</button>
-      <button onClick={reset}>Resetear</button>
+      <div className="d-flex justify-content-center mt-2 w-20">
+        <button className="btn btn-primary mx-2" onClick={filterList}>
+          Buscar
+        </button>
+        <button className="btn btn-warning mx-2 w-20" onClick={reset}>
+          Resetear
+        </button>
+      </div>
     </div>
   );
 };

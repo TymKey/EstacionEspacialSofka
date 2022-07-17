@@ -117,7 +117,7 @@ const Space = () => {
 
   return (
     <div>
-      <h2>Naves Espaciales</h2>
+      <h2 className="text-center mt-4">Naves Espaciales</h2>
       <Filter database={database} setFilteredDatabase={setFilteredDatabase} />
       <Form createData={createData} />
       <Table data={filteredDatabase} />
