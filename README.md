@@ -12,6 +12,7 @@ el programa de la empresa **Sofka**
 **IMPORTANTE**
 
 Enlace para redirigirse al Aplicaciòn : https://estacionespacial.netlify.app/
+
 Enlace para redirigirse al video de Youtube : https://www.youtube.com/watch?v=tMx-oPH2dTk
 
 ## Tecnologías 🖥
