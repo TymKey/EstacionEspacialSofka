@@ -1,6 +1,6 @@
 # Estación Espacial Sofka
 
-![Logo](https://microlabscorp.com/wp-content/uploads/2022/04/cohete-1-879x1024.png)
+![Logo]([https://microlabscorp.com/wp-content/uploads/2022/04/cohete-1-879x1024.png](https://play-lh.googleusercontent.com/w0vkQpu9MVCHzDF1tjEcqDokyWiNzXO2swk6avZzAFBE0ZbZw6fNTB1r1HjR2A7nJg))
 
 Reto Técnico Sofka: Training League
 
